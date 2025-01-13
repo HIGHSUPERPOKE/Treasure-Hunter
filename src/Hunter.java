@@ -27,6 +27,7 @@ public class Hunter {
         return hunterName;
     }
 
+
     /**
      * Updates the amount of gold the hunter has.
      *
