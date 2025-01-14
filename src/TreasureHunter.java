@@ -55,7 +55,8 @@ public class TreasureHunter {
         }
         if (hard.equals("test")) {
             hardMode = false;
-            hunter.changeGold(100);
+            hunter.changeGold(80);
+            hunter.fullKit();
         }
     }
 

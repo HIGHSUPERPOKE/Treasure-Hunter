@@ -143,7 +143,7 @@ public class Hunter {
     public String infoString() {
         String str = hunterName + " has " + Colors.YELLOW + gold + Colors.RESET + " gold";
         if (!kitIsEmpty()) {
-            str += " and " + getInventory();
+            str += " and " + Colors.PURPLE + getInventory() + Colors.RESET;
         }
         return str;
     }
@@ -191,5 +191,10 @@ public class Hunter {
             }
         }
         return -1;
+    }
+
+    public void fullKit() {
+        String[] newkit = {"water", "rope", "machete", "horse", "boat"};
+        kit = newkit;
     }
 }
