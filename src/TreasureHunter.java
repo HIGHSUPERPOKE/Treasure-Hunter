@@ -101,6 +101,10 @@ public class TreasureHunter {
         while (!choice.equals("x")) {
             System.out.println();
             System.out.println(currentTown.getLatestNews());
+            if(hunter.getGold() <= 0){
+                System.out.println("Game Over");
+                break;
+            }
             System.out.println("***");
             System.out.println(hunter.infoString());
             System.out.println(currentTown.infoString());
