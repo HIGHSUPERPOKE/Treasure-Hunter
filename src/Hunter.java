@@ -9,6 +9,7 @@ public class Hunter {
     private String hunterName;
     private String[] kit;
     private int gold;
+    private boolean dug;
 
     /**
      * The base constructor of a Hunter assigns the name to the hunter and an empty kit.
@@ -18,7 +19,7 @@ public class Hunter {
      */
     public Hunter(String hunterName, int startingGold) {
         this.hunterName = hunterName;
-        kit = new String[6]; // only 5 possible items can be stored in kit
+        kit = new String[8]; // only 5 possible items can be stored in kit
         gold = startingGold;
     }
 
@@ -31,6 +32,10 @@ public class Hunter {
         return gold;
     }
 
+    public void setDug(boolean dug){
+        this.dug = dug;
+    }
+
     /**
      * Updates the amount of gold the hunter has.
      *
@@ -40,6 +45,26 @@ public class Hunter {
         gold += modifier;
         if (gold < 0) {
             gold = 0;
+        }
+    }
+
+    public void digGold() {
+        double rnd = Math.random();
+        int rnd2 =(int) (Math.random() * 20) + 1;
+        if (hasItemInKit("shovel")) {
+            if(!dug) {
+                if (rnd < .5) {
+                    System.out.println("You dug up " + rnd2 + " gold");
+                    gold += rnd2;
+                    dug = true;
+                } else {
+                    System.out.println("You dug but only found dirt");
+                }
+            }else{
+                System.out.println("You already dug gold for in this town");
+            }
+        }else{
+            System.out.println("You cant dig for gold without a shovel");
         }
     }
 
