@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eb69c948-0918-40bc-9024-aed0e6e0ea39" name="Changes" comment="TH-4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hunter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Town.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Town.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TreasureHunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TreasureHunter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +32,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/HIGHSUPERPOKE/Treasure-Hunter.git",
-    "accountId": "0ee6a538-07b4-422d-a86a-3c38b503d192"
+    "accountId": "ab3967db-a026-4b43-b130-316ccc5ce078"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -50,14 +47,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.TreasureHunterRunner.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TreasureHunterRunner.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="TreasureHunterRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TreasureHunterRunner" />
