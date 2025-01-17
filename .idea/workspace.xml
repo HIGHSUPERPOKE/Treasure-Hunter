@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="eb69c948-0918-40bc-9024-aed0e6e0ea39" name="Changes" comment="TH-4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hunter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Town.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Town.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TreasureHunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TreasureHunter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +34,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/HIGHSUPERPOKE/Treasure-Hunter.git",
-    "accountId": "ab3967db-a026-4b43-b130-316ccc5ce078"
+    "accountId": "3b3a93f5-61dd-4ecc-82c8-fc7f40a6ad72"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -49,7 +51,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.TreasureHunterRunner.executor": "Debug",
+    "Application.TreasureHunterRunner.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true"

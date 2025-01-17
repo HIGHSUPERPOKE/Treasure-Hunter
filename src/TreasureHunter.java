@@ -18,6 +18,7 @@ public class TreasureHunter {
     private boolean hardMode;
     private boolean easyMode;
     private boolean normalMode;
+    private String[] treasure;
 
 
     /**
@@ -30,6 +31,7 @@ public class TreasureHunter {
         easyMode = false;
         normalMode = false;
         hardMode = false;
+        treasure = new String[3];
     }
 
     /**
@@ -133,6 +135,7 @@ public class TreasureHunter {
             System.out.println("(M)ove on to a different town.");
             System.out.println("(L)ook for trouble!");
             System.out.println("(D)ig for Gold.");
+            System.out.println("(H)unt for treasure.");
             System.out.println("Give up the hunt and e(X)it.");
             System.out.println();
             System.out.print("What's your next move? ");
@@ -160,10 +163,64 @@ public class TreasureHunter {
             currentTown.lookForTrouble();
         }else if (choice.equals(("d"))) {
             hunter.digGold();
-        } else if (choice.equals("x")) {
+        } else if (choice.equals("h")){
+            findTreasure(currentTown.getTownTreasure());
+        }
+        else if (choice.equals("x")) {
             System.out.println("Fare thee well, " + hunter.getHunterName() + "!");
         } else {
             System.out.println("Yikes! That's an invalid option! Try again.");
         }
+    }
+
+
+
+    private int emptyPositionInTreasure() {
+        for (int i = 0; i < treasure.length; i++) {
+            if (treasure[i] == null) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public boolean hasItemInTreasure(String item) {
+        for (String tmpItem : treasure) {
+            if (item.equals(tmpItem)) {
+                // early return
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void findTreasure(String item) {
+        if(!currentTown.isTownSearched()) {
+            if (!hasItemInTreasure(item) && !currentTown.getTownTreasure().equals("dust")) {
+                int idx = emptyPositionInTreasure();
+                treasure[idx] = item;
+                System.out.println("you found a " + currentTown.getTownTreasure() + "!");
+                System.out.println(treasureList());
+                currentTown.setTownSearched(true);
+            } else if(hasItemInTreasure(item)) {
+                System.out.println("you already have a " + currentTown.getTownTreasure() + "!");
+                currentTown.setTownSearched(true);
+            }else{
+                System.out.println("you found dust");
+                currentTown.setTownSearched(true);
+            }
+        }else{
+            System.out.println("town is already searched");
+        }
+    }
+
+    public String treasureList(){
+        String list = "";
+        for(int i = 0; i < treasure.length; i++){
+            if(treasure[i] != null){
+                list += treasure[i] + " ";
+            }
+        }
+        return list;
     }
 }

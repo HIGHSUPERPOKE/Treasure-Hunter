@@ -10,6 +10,7 @@ public class Hunter {
     private String[] kit;
     private int gold;
     private boolean dug;
+    private String[] treasure;
 
     /**
      * The base constructor of a Hunter assigns the name to the hunter and an empty kit.
@@ -20,6 +21,7 @@ public class Hunter {
     public Hunter(String hunterName, int startingGold) {
         this.hunterName = hunterName;
         kit = new String[8]; // only 5 possible items can be stored in kit
+        treasure = new String[3];
         gold = startingGold;
     }
 
@@ -225,4 +227,6 @@ public class Hunter {
         String[] newkit = {"water", "rope", "machete", "horse", "boat", "boot"};
         kit = newkit;
     }
+
+
 }
