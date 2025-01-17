@@ -18,6 +18,7 @@ public class TreasureHunter {
     private boolean hardMode;
     private boolean easyMode;
     private boolean normalMode;
+    private boolean samuraiMode;
     private String[] treasure;
 
 
@@ -31,7 +32,12 @@ public class TreasureHunter {
         easyMode = false;
         normalMode = false;
         hardMode = false;
+        samuraiMode = false;
         treasure = new String[3];
+    }
+
+    public boolean isSamuraiMode(){
+        return samuraiMode;
     }
 
     /**
@@ -53,7 +59,7 @@ public class TreasureHunter {
         String name = SCANNER.nextLine().toLowerCase();
 
         // set hunter instance variable
-        hunter = new Hunter(name, 20);
+        hunter = new Hunter(name, 20, this);
 
         System.out.print("Easy Normal Hard: (e/n/h) ");
         String mode = SCANNER.nextLine().toLowerCase();
@@ -72,6 +78,10 @@ public class TreasureHunter {
         }
         if(mode.equals("n")){
             normalMode = true;
+        }
+
+        if(mode.equals("s")){
+            samuraiMode = true;
         }
 
     }
@@ -98,12 +108,12 @@ public class TreasureHunter {
         // note that we don't need to access the Shop object
         // outside of this method, so it isn't necessary to store it as an instance
         // variable; we can leave it as a local variable
-        Shop shop = new Shop(markdown);
+        Shop shop = new Shop(markdown, this);
 
         // creating the new Town -- which we need to store as an instance
         // variable in this class, since we need to access the Town
         // object in other methods of this class
-        currentTown = new Town(shop, toughness);
+        currentTown = new Town(shop, toughness, this);
 
         // calling the hunterArrives method, which takes the Hunter
         // as a parameter; note this also could have been done in the
@@ -246,5 +256,14 @@ public class TreasureHunter {
             }
         }
         return true;
+    }
+
+    public boolean isHasSword(){
+        for(int i = 0; i < treasure.length; i++){
+            if(treasure[i] != null){
+                return true;
+            }
+        }
+        return false;
     }
 }
