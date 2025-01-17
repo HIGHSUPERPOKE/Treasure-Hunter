@@ -121,6 +121,10 @@ public class TreasureHunter {
         String choice = "";
         while (!choice.equals("x")) {
             System.out.println();
+            if(treasureIsFull()){
+                System.out.println("Congratulations, you have found the last of the three treasures, you win!");
+                break;
+            }
             System.out.println(currentTown.getLatestNews());
             if(hunter.getGold() <= 0){
                 System.out.println("Game Over");
@@ -203,7 +207,6 @@ public class TreasureHunter {
                 int idx = emptyPositionInTreasure();
                 treasure[idx] = item;
                 System.out.println("you found a " + currentTown.getTownTreasure() + "!");
-                System.out.println(treasureList());
                 currentTown.setTownSearched(true);
             } else if(hasItemInTreasure(item)) {
                 System.out.println("you already have a " + currentTown.getTownTreasure() + "!");
@@ -230,6 +233,15 @@ public class TreasureHunter {
     public boolean treasureIsEmpty() {
         for (String string : treasure) {
             if (string != null) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean treasureIsFull() {
+        for (String string : treasure) {
+            if(string == null){
                 return false;
             }
         }
