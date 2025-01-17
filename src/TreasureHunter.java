@@ -128,6 +128,9 @@ public class TreasureHunter {
             }
             System.out.println("***");
             System.out.println(hunter.infoString());
+            if(!treasureIsEmpty()){
+                System.out.println("Treasure found: " + treasureList());
+            }
             System.out.println(currentTown.infoString());
             System.out.println("(B)uy something at the shop.");
             System.out.println("(S)ell something at the shop.");
@@ -222,5 +225,14 @@ public class TreasureHunter {
             }
         }
         return list;
+    }
+
+    public boolean treasureIsEmpty() {
+        for (String string : treasure) {
+            if (string != null) {
+                return false;
+            }
+        }
+        return true;
     }
 }
